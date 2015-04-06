@@ -1,0 +1,43 @@
+@color-gray: #778899;
+@color-blue: #1E90FF;
+
+@the-border: 1px;
+
+@font-print: "Segoe Print", "Microsoft YaHei UI";
+@font-normal: "Segoe UI", "Microsoft YaHei UI";
+@font-light: "Segoe UI Light", "Microsoft YaHei UI Light";
+
+body {
+  color: @color-gray;
+  font-family: @font-normal;
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+#header {
+  color: @color-blue;
+  font-family: @font-print;
+  text-align: center;
+  border-bottom: solid @the-border @color-blue;
+}
+
+#container {
+  text-align: left;
+  padding-top: @the-border * 10;
+}
+
+table {
+  width: 100%;
+  border: solid @the-border @color-gray;
+  tr {
+    border: solid @the-border @color-gray;
+  }
+  th {
+    border: solid @the-border @color-gray;
+  }
+  td {
+    border: solid @the-border @color-gray;
+  }
+}

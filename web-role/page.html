@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Multimedia Logging Service <?php echo '<p>Hello World</p>'; ?> </h1>
+    </div>
+    <div id="container">
+      <?php
+      echo "<table>\n";
+      $f = fopen("huangjingbo_dis_transcode_app.20150402.log", "r");
+      while (($line = fgetcsv($f)) !== false) {
+        echo "<tr>";
+        oreach ($line as $cell) {
+          echo "<td>" . htmlspecialchars($cell) . "</td>";
+        }
+        echo "</tr>\n";
+      }
+      fclose($f);
+      echo "\n</table>";
+      ?>
+    </div>
+  </body>
+</html>
